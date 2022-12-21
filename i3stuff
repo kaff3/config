@@ -1,0 +1,72 @@
+# config
+i3-config-wizard
+/home/groenborg/.config/i3/config
+/usr/share/X11/xorg.conf.d/40-libinput.conf
+~/.bashrc
+
+# Audio devices
+pavucontrol
+
+# Ubuntu file manager
+nautilus
+
+# Power save options
+xset s off && xset -dpms && xset s noblank
+
+# Monitors
+xrandr // list monitors
+xrandr --output HDMI-A-0 --right-of eDP --auto // left-to-right
+xrandr --output *S* --primary // set primary display
+
+# Internet
+nmtui
+
+### Shortcuts
+# open terminal
+$mod + enter
+
+# start program
+$mod + d
+
+# quit program
+$mod + q
+
+# restart i3
+$mod + shift + r
+
+# exit i3
+$mod + shift + e
+
+# moves
+$mod + j // left
+$mod + k // up
+$mod + l // down
+$mod + æ // right
+
+# full screen
+$mod + f
+
+# resize
+$mod + r
+
+# splits
+$mod + h
+$mod + v
+
+# layouts
+$mod + s // stacked
+$mod + w // tabbed
+$mod + e // default (change hori to vert etc)
+
+# focus floating/tiling
+$mod + space 
+
+# toggle tiling/floating
+$mod + shift + space
+
+# change workspace
+$mod + NUMBER
+
+# move window to different workspace
+$mod + shift + NUMBER
+
