@@ -125,6 +125,7 @@ xmodmap -e "keycode 49 = less greater less greater backslash notsign backslash"
 
 # i3 help
 alias i3help='cat /home/groenborg/Documents/i3stuff'
+alias editi3='micro /home/groenborg/.config/i3/config'
 
 alias gitcode='cat /home/groenborg/Documents/programming/git'
 

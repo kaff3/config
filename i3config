@@ -225,6 +225,7 @@ for_window [urgent=latest] focus
 # Open specific applications in floating mode
 for_window [class="Nautilus"] floating enable
 for_window [title="Zoom"] floating enable
+for_window [class="Spotify"] fullscreen enable
 
 exec --no-startup-id nitrogen --restore;
 
@@ -234,3 +235,4 @@ default_orientation horizontal
 hide_edge_borders none
 bindsym $mod+u border none
 bindsym $mod+n border normal
+
