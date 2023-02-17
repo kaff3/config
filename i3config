@@ -46,10 +46,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 # change focus
-bindsym $mod+j focus left; exec --no-startup-id ~/.config/i3/center-mouse.sh
-bindsym $mod+k focus down; exec --no-startup-id ~/.config/i3/center-mouse.sh
-bindsym $mod+l focus up; exec --no-startup-id ~/.config/i3/center-mouse.sh
-bindsym $mod+ae focus right; exec --no-startup-id ~/.config/i3/center-mouse.sh
+bindsym $mod+h focus left; exec --no-startup-id ~/.config/i3/center-mouse.sh
+bindsym $mod+j focus down; exec --no-startup-id ~/.config/i3/center-mouse.sh
+bindsym $mod+k focus up; exec --no-startup-id ~/.config/i3/center-mouse.sh
+bindsym $mod+l focus right; exec --no-startup-id ~/.config/i3/center-mouse.sh
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left; exec --no-startup-id ~/.config/i3/center-mouse.sh
@@ -58,10 +58,10 @@ bindsym $mod+Up focus up; exec --no-startup-id ~/.config/i3/center-mouse.sh
 bindsym $mod+Right focus right; exec --no-startup-id ~/.config/i3/center-mouse.sh
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ae move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -70,7 +70,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -196,8 +196,8 @@ bindsym $mod+Print exec gnome-screenshot -a
 
 # Theme
 client.background: 			#2f2f38
-client.focused: 			#b0c4bb #b0c4bb #81a2be #81a2be #688486
-client.unfocused:			#b0c4bb #2f2f38 #b0c4bb #688486 #688486
+client.focused: 		    #b0c4bb #2f2f38 #b0c4bb #688486 #688486
+client.unfocused:			#688486 #2f2f38 #2f2f38 #2f2f38 #2f2f38
 client.focused_inactive: 	#b0c4bb #2f2f38 #b0c4bb #688486 #688486
 client.urgent: 				#b0c4bb #2f2f38 #b0c4bb #688486 #688486
 client.placeholder:			#b0c4bb #2f2f38 #b0c4bb #688486 #688486
@@ -224,7 +224,6 @@ for_window [urgent=latest] focus
 
 # Open specific applications in floating mode
 for_window [class="Nautilus"] floating enable
-for_window [title="Zoom"] floating enable
 for_window [class="Spotify"] fullscreen enable
 
 exec --no-startup-id nitrogen --restore;
@@ -236,3 +235,6 @@ hide_edge_borders none
 bindsym $mod+u border none
 bindsym $mod+n border normal
 
+# prevent screen saver
+exec xset s off
+exec xset -dpms
