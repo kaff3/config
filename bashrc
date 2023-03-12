@@ -124,7 +124,8 @@ export PATH=$HOME/Programs/ispc-v1.18.1-linux/bin:$PATH
 xmodmap -e "keycode 49 = less greater less greater backslash notsign backslash"
 
 # i3 help
-alias i3help='cat /home/groenborg/Documents/i3stuff'
+alias i3help='cat /home/groenborg/Documents/config/i3stuff.txt'
+alias bashhelp='cat /home/groenborg/Documents/config/bashhelp.txt'
 alias i3edit='micro /home/groenborg/.config/i3/config'
 alias home_monitor='xrandr --output HDMI-A-0 --right-of eDP --auto'
 
@@ -144,7 +145,7 @@ alias open='xdg-open'
 xset s off
 
 # us international keyboard layout
-setxkbmap us -variant intl
+setxkbmap us -variant intl 
 
 [ -f "/home/groenborg/.ghcup/env" ] && source "/home/groenborg/.ghcup/env" # ghcup-env
 
@@ -153,4 +154,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # enable vim commands in bash
-# set -o vi
+set -o vi
