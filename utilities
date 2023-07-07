@@ -1,0 +1,34 @@
+# hardware specifications:
+general - lstopo / lscpu (/proc/cpuinfo) 
+PCI - lspci
+
+# Bluetooth
+systemctl enable bluetooth
+
+## connect
+bluetoothctl
+scan on
+trust
+pair
+connect
+
+# Packages
+## AUR (PKGBUILD FILES)
+makepkg -si
+
+## Pacman
+pacman -Sy (synchronize)
+pacman -Syy (sync force online)
+pacman -Syu (sync and update)
+pacman -Syu (sync and update, force online repo)
+pacman -S firefox (install package)
+pacman -Sw firefox (download package)
+pacman -Ss firefox (search for packages)
+pacman -Q firefox (package version info)
+pacman -R (remove package)
+
+## Yay
+yay -Ss chrome (search for package)
+yay -S google-chrome (install package)
+pacman -R google-chrome (remove package, note pacman)
+

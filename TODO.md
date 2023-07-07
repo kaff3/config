@@ -1,0 +1,2 @@
+- bar color
+- shortcut list edit in i3 config
