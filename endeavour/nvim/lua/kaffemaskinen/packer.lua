@@ -15,6 +15,8 @@
 
 		use('sainnhe/gruvbox-material')
 
+        use('christoomey/vim-tmux-navigator')
+
 		use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 		use('theprimeagen/harpoon')
@@ -23,26 +25,20 @@
 
 		use('tpope/vim-fugitive')
 
-		use {
-			'VonHeikemen/lsp-zero.nvim',
-			branch = 'v2.x',
-			requires = {
-				-- LSP Support
-				{'neovim/nvim-lspconfig'},             -- Required
-				{                                      -- Optional
-				'williamboman/mason.nvim',
-				run = function()
-					pcall(vim.cmd, 'MasonUpdate')
-				end,
-                },
-                {'williamboman/mason-lspconfig.nvim'}, -- Optional
+        --completion
+        use('hrsh7th/nvim-cmp')
+        use('hrsh7th/cmp-nvim-lsp')
+        use('L3MON4D3/LuaSnip')
+        use('saadparwaiz1/cmp_luasnip')
+        use('rafamadriz/friendly-snippets')
 
-                -- Autocompletion
-                {'hrsh7th/nvim-cmp'},     -- Required
-                {'hrsh7th/cmp-nvim-lsp'}, -- Required
-                {'L3MON4D3/LuaSnip'},     -- Required
-            }
-        } 
+        -- lsp
+        use {
+            "williamboman/mason.nvim",
+            "williamboman/mason-lspconfig.nvim",
+            "neovim/nvim-lspconfig",
+        }
+
         use {
             "tversteeg/registers.nvim",
             config = function()
@@ -51,5 +47,8 @@
         }
 
         use 'tpope/vim-commentary'
+
+        use 'tpope/vim-surround'
+
         use 'machakann/vim-highlightedyank'
 end)

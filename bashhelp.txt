@@ -1,5 +1,0 @@
-# Moving
-- beginning: ctrl + a
-- end: ctrl + e
-
-

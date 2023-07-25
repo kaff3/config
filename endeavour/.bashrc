@@ -93,5 +93,4 @@ alias nv='nvim'
 # REMAP CTRL
 setxkbmap -option ctrl:nocaps
 xcape -e 'Control_L=Escape'
-# remap clear
-bind -x '"\ESC": clear;'
+. "$HOME/.cargo/env"
