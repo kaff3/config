@@ -12,7 +12,11 @@ Main() {
         "+d" "app menu" ""
         "+q" "close focused app" ""
         "+Shift+e" "logout menu" ""
-        "F1" "open keybinding helper" ""
+        "F1" "open endeavour keybinding helper" ""
+        "F2" "open i3 keybinding helper" ""
+        "F3" "open nvim keybinding helper" ""
+        "F4" "open tmux keybinding helper" ""
+        "F5" "open bash keybinding helper" ""
     )
 
     "${command[@]}"

@@ -148,3 +148,7 @@ shell:
     - -c
     # - "tmux attach || tmux"
     - "tmux"
+
+key_bindings:
+  - { key: PageUp,  action: ScrollLineUp }
+  - { key: PageDown, action: ScrollLineDown }

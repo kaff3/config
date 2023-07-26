@@ -1,0 +1,46 @@
+#!/bin/bash
+
+Main() {
+    source /usr/share/endeavouros/scripts/eos-script-lib-yad || return 1
+
+    local command=(
+        eos_yad --title="NVIM keybindings" --no-buttons --geometry=400x345-15-400 --list
+        --column=key: --column=description: 
+        "GENERAL" ""
+        "leader+pf" "fuzzy find file"
+        "leader+pv" "netrw"
+        "leader+ps" "grep files"
+        "C-p" "fuzzy find git files"
+        "leader+gs" "git"
+        "leader+u" "undo tree"
+        "gcc" "comment line (count)"
+        "gc" "comment motion/selection"
+        "cs" "change surround"
+        "ys" "add surround"
+        "J" "move down selection"
+        "K" "move up selection"
+        "" ""
+        "LSP/SNIPPETS" ""
+        "C-p" "prev item"
+        "C-n" "next item"
+        "C-y" "confirm"
+        "C-a" "complete"
+        "gd" "definition"
+        "gD" "declaration"
+        "gi" "implementation"
+        "K" "hover"
+        "leader+gr" "references"
+        "[d" "goto next"
+        "]d" "goto prev"
+        "" ""
+        "HARPOON" ""
+        "leader+a" "add file"
+        "C-e" "quick menu"
+        "leader+num" "navigate to num"
+    )
+
+    "${command[@]}"
+}
+
+Main "$@"
+
