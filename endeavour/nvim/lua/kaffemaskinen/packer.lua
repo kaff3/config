@@ -23,6 +23,14 @@
 
 		use('mbbill/undotree')
 
+        -- tree
+        use {
+            'nvim-tree/nvim-tree.lua',
+            'nvim-tree/nvim-web-devicons'
+        }
+
+        use ('nvim-lualine/lualine.nvim')
+
 		use('tpope/vim-fugitive')
 
         --completion
@@ -31,12 +39,20 @@
         use('L3MON4D3/LuaSnip')
         use('saadparwaiz1/cmp_luasnip')
         use('rafamadriz/friendly-snippets')
+        use('glepnir/lspsaga.nvim')
 
         -- lsp
         use {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
             "neovim/nvim-lspconfig",
+        }
+
+        -- rust
+        use {
+            "simrat39/rust-tools.nvim",
+            "mfussenegger/nvim-dap",
+            "rcarriga/nvim-dap-ui"
         }
 
         use {
@@ -51,4 +67,6 @@
         use 'tpope/vim-surround'
 
         use 'machakann/vim-highlightedyank'
+
+        use {"shortcuts/no-neck-pain.nvim", tag = "*" }
 end)

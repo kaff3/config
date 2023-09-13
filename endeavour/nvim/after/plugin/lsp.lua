@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls" }
+    ensure_installed = { "lua_ls", "rust_analyzer", "hls", "html", "csharp_ls"}
 })
 
 local on_attach = function(_, bufnr)
@@ -28,6 +28,16 @@ require("lspconfig").lua_ls.setup {
 }
 
 require("lspconfig").csharp_ls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+require("lspconfig").hls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+require("lspconfig").html.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
