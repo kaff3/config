@@ -15,9 +15,15 @@
 
 		use('sainnhe/gruvbox-material')
 
-        use('christoomey/vim-tmux-navigator')
+    use('christoomey/vim-tmux-navigator')
 
 		use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
+    use({
+      "nvim-treesitter/nvim-treesitter-textobjects",
+      after = "nvim-treesitter",
+      requires = "nvim-treesitter/nvim-treesitter",
+    })
 
 		use('theprimeagen/harpoon')
 
@@ -29,7 +35,7 @@
             'nvim-tree/nvim-web-devicons'
         }
 
-        use ('nvim-lualine/lualine.nvim')
+        -- use ('nvim-lualine/lualine.nvim')
 
 		use('tpope/vim-fugitive')
 
@@ -39,7 +45,11 @@
         use('L3MON4D3/LuaSnip')
         use('saadparwaiz1/cmp_luasnip')
         use('rafamadriz/friendly-snippets')
-        use('glepnir/lspsaga.nvim')
+        -- use ({
+        --     'nvimdev/lspsaga.nvim',
+        --     after = 'nvim-lspconfig',
+        -- })
+
 
         -- lsp
         use {
@@ -69,4 +79,6 @@
         use 'machakann/vim-highlightedyank'
 
         use {"shortcuts/no-neck-pain.nvim", tag = "*" }
+
+        use 'BeneCollyridam/futhark-vim'
 end)

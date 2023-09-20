@@ -2,6 +2,15 @@ require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = { "lua_ls", "rust_analyzer", "hls", "html", "csharp_ls"}
 })
+-- require('lspsaga').setup({
+--   symbol_in_winbar = {
+--     in_custom = false,
+--     enable = true,
+--     separator = ' ',
+--     show_file = true,
+--     file_formatter = ""
+--   },
+-- })
 
 local on_attach = function(_, bufnr)
     local opts = {buffer = bufnr, remap = false}

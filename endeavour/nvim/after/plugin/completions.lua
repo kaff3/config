@@ -5,9 +5,9 @@ require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
    preselect = 'item',
-   -- completion = {
-       -- completeopt = 'menu,menuone,noinsert'
-   -- },
+   completion = {
+       completeopt = 'menu,menuone,noinsert'
+   },
    mapping = cmp.mapping.preset.insert({
        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
