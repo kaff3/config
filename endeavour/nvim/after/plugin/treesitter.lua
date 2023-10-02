@@ -35,6 +35,8 @@ require'nvim-treesitter.configs'.setup {
         ['il'] = '@loop.inner',
         ['al'] = '@loop.outer',
         ['at'] = '@comment.outer',
+        ['iv'] = '@assignment.inner',
+        ['av'] = '@assignment.outer',
       },
     },
     move = {

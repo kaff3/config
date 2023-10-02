@@ -25,3 +25,11 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 -- switch project
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
+-- turn off search highlights
+vim.keymap.set("n", "<leader>ss", ":noh<CR>")
+
+-- no-neck-pain
+vim.keymap.set("n", "<leader>nnp", ":NoNeckPain<CR>")
+
+-- ;
+vim.keymap.set("n", "<leader>;", "A;<Esc>o")
