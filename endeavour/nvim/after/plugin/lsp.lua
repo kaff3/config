@@ -2,15 +2,6 @@ require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = { "lua_ls", "rust_analyzer", "hls", "html", "csharp_ls"}
 })
--- require('lspsaga').setup({
---   symbol_in_winbar = {
---     in_custom = false,
---     enable = true,
---     separator = ' ',
---     show_file = true,
---     file_formatter = ""
---   },
--- })
 
 local on_attach = function(_, bufnr)
     local opts = {buffer = bufnr, remap = false}
@@ -24,7 +15,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
     vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
-    vim.keymap.set("n", "<leader>gr", function() vim.lsp.buf.references() end, opts)
+    vim.keymap.set('n', '<leader>gr', function() require('telescope.builtin').lsp_references( { show_line = false }) end, { noremap = true, silent = true })
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end

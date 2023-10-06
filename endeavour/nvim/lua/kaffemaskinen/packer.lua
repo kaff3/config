@@ -75,5 +75,4 @@
         "rcarriga/nvim-dap-ui"
     }
 
-
 end)
