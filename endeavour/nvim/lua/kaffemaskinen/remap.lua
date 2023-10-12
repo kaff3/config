@@ -33,3 +33,6 @@ vim.keymap.set("n", "<leader>nnp", ":NoNeckPain<CR>")
 
 -- ;
 vim.keymap.set("n", "<leader>;", "A;<Esc>o")
+
+-- toggle wrap
+vim.keymap.set("n", "<leader>tw", ":set wrap!<CR>zL")
