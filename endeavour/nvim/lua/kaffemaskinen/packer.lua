@@ -8,7 +8,7 @@
 		use 'wbthomason/packer.nvim'
 
 		use {
-			'nvim-telescope/telescope.nvim', tag = '0.1.1',
+			'nvim-telescope/telescope.nvim', tag = '0.1.3',
 			-- or                            , branch = '0.1.x',
 			requires = { {'nvim-lua/plenary.nvim'} }
 		}
@@ -67,7 +67,7 @@
         "neovim/nvim-lspconfig",
     }
     use 'BeneCollyridam/futhark-vim'
-
+    use 'kaff3/futhark-gpu-ir-vim'
     -- rust
     use {
         "simrat39/rust-tools.nvim",

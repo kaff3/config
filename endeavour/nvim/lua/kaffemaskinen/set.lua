@@ -20,7 +20,7 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 -- layout
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 12
 
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
