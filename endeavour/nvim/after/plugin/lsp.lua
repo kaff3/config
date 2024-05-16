@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "rust_analyzer", "hls", "html", "csharp_ls", "pylsp", "clangd"}
+    ensure_installed = { "lua_ls", "rust_analyzer", "hls", "html", "csharp_ls", "pylsp", "clangd", "gopls"}
 })
 
 local on_attach = function(_, bufnr)
@@ -46,6 +46,11 @@ require("lspconfig").html.setup {
 }
 
 require("lspconfig").pylsp.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+require("lspconfig").gopls.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
